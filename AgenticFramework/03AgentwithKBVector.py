@@ -14,7 +14,7 @@ agents_client = AgentsClient(
 
 
 # Create the file_search tool
-vector_store_id = "vs_7Yj3kEPo30VwiNeEgDJOoBsE"
+vector_store_id = "vs_7Yj3kEPosE"
 file_search = FileSearchTool(vector_store_ids=[vector_store_id])
 
 # Creating the toolset

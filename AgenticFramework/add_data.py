@@ -15,11 +15,11 @@ agents_client = AgentsClient(
 )
 
 
-DOCS_DIR = "./documents"
+DOCS_DIR = "./knowledgebase"
 
 if not os.path.isdir(DOCS_DIR):
     raise FileNotFoundError(
-        f"Documents folder not found at {DOCS_DIR}. "
+        f"knowledgebase folder not found at {DOCS_DIR}. "
         "Create it and add your Contoso Pizza files (PDF, TXT, MD, etc.)."
     )
 
@@ -38,7 +38,7 @@ for fname in os.listdir(DOCS_DIR):
 
 print(f"Uploaded {len(file_ids)} files.")
 if not file_ids:
-    raise RuntimeError("No files uploaded. Put files in ./documents and re-run.")
+    raise RuntimeError("No files uploaded. Put files in ./knowledgebase and re-run.")
 
 
 vector_store = agents_client.vector_stores.create_and_poll(
