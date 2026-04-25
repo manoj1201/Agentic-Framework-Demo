@@ -193,3 +193,8 @@ In this chapter, you:
 - Created a basic AI agent
 - Interacted with a GPT-4o model
 - Cleaned up resources
+
+
+## Complete Code Sample
+
+See the final implementation in your project for the full `01BasicAgent.py` with all tools integrated and ready to use.

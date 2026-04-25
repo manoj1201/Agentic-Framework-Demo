@@ -17,7 +17,7 @@ agents_client = AgentsClient(
 )
 
 # Create the file_search tool
-vector_store_id = "vs_XDUBr4RtSCQjDEy71tqAw22J"
+vector_store_id = "vs______"
 file_search = FileSearchTool(vector_store_ids=[vector_store_id])
 
 # Create the function tool
@@ -26,17 +26,16 @@ function_tool = FunctionTool(functions={calculate_pizza_for_people})
 # Add MCP tool so the agent can call Contoso Pizza microservices
 mcp_tool = McpTool(
     server_label="contoso_pizza",
-    server_url="https://ca-pizza-mcp-sc6u2typoxngc.graypond-9d6dd29c.eastus2.azurecontainerapps.io/sse",
+    server_url="https://api.example.com/mcp/sse",
     allowed_tools=[
-        "get_pizzas",
-        "get_pizza_by_id",
-        "get_toppings",
-        "get_topping_by_id",
-        "get_topping_categories",
-        "get_orders",
-        "get_order_by_id",
-        "place_order",
-        "delete_order_by_id",
+        "get_menu_items",
+        "get_item_details",
+        "get_categories",
+        "get_item_by_category",
+        "list_orders",
+        "get_order_details",
+        "create_order",
+        "cancel_order",
     ],
 )
 mcp_tool.set_approval_mode("never")

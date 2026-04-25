@@ -139,3 +139,7 @@ Type `exit` or `quit` to stop.
 - Created a vector store
 - Indexed your data
 - Connected File Search to your agent
+
+## Complete Code Sample
+
+See the final implementation in your project for the full `03AgentwithKBVector.py` with all tools integrated and ready to use.

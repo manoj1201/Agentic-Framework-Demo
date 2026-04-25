@@ -102,3 +102,6 @@ In this chapter, you learned how to:
 
 With these skills, you can now create agents tailored to specific use cases and maintain consistent behavior across conversations.
 
+## Complete Code Sample
+
+See the final implementation in your project for the full `02AgentwithInstruction.py` with all tools integrated and ready to use.
