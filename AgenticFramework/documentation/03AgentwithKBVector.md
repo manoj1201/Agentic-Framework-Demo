@@ -1,7 +1,7 @@
 
 # Enhance Your Agent with File Search (RAG)
 
-This guide shows how to ground your agent in your own data using Retrieval-Augmented Generation (RAG) and the File Search tool in Microsoft Foundry. You'll upload documents, create a vector store, and connect it to your agent for smarter, data-driven answers.
+This guide shows how to ground your agent in your own data using Retrieval-Augmented Generation (RAG) and the File Search tool in Microsoft Foundry. You'll upload knowledgebase, create a vector store, and connect it to your agent for smarter, data-driven answers.
 
 ---
 
@@ -13,7 +13,7 @@ By default, AI models only know what they were trained on. They don’t have acc
 
 ## Scenario
 
-Suppose you have a `./documents` folder with information about Contoso Pizza (store locations, hours, menus). You want your agent to answer questions using this data.
+Suppose you have a `./knowledgebase` folder with information about Contoso Pizza (store locations, hours, menus). You want your agent to answer questions using this data.
 
 You will:
 1. Upload these files
@@ -40,9 +40,9 @@ project_client = AIProjectClient(
     credential=DefaultAzureCredential()
 )
 
-DOCS_DIR = "./documents"
+DOCS_DIR = "./knowledgebase"
 if not os.path.isdir(DOCS_DIR):
-    raise FileNotFoundError("Create ./documents and add your files.")
+    raise FileNotFoundError("Create ./knowledgebase and add your files.")
 
 print(f"Uploading files from {DOCS_DIR} ...")
 file_ids = []
@@ -82,7 +82,7 @@ python add_data.py
 Example output:
 
 ```
-Uploading files from ./documents ...
+Uploading files from ./knowledgebase ...
 Uploaded 10 files.
 Vector store ID: vs_xxx
 Batch ID: vsfb_xxx
@@ -135,7 +135,7 @@ Type `exit` or `quit` to stop.
 ## Recap
 
 - Used RAG to enhance your agent
-- Uploaded documents
+- Uploaded knowledgebase
 - Created a vector store
 - Indexed your data
 - Connected File Search to your agent
