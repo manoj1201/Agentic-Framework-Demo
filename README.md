@@ -1,8 +1,3 @@
----
-title: AIAgentic-Framework
-description: Workshop repository with five progressive Azure AI agent examples, local setup steps, and chapter-based documentation.
----
-
 ## Overview
 
 This repository contains five progressive Azure AI agent examples. Each script builds on the previous one, starting from a basic conversational agent and ending with MCP integration.
@@ -38,12 +33,6 @@ If `.venv` already exists, you can reuse it. Otherwise create one:
 
 ```powershell
 uv venv .venv --python 3.13
-```
-
-Activate it (Windows PowerShell):
-
-```powershell
-.\.venv\Scripts\Activate.ps1
 ```
 
 ### 3. Install Dependencies
