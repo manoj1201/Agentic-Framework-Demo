@@ -1,0 +1,46 @@
+[project]
+name = "agent-framework-workshop"
+version = "0.1.0"
+description = "Project AETHER: A challenge-based workshop to learn the Microsoft Agent Framework"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # Microsoft Agent Framework — pinned for workshop stability
+    "agent-framework==1.0.0rc2",
+    "agent-framework-azure-ai==1.0.0rc2",
+    "agent-framework-core==1.0.0rc2",
+
+    # Pydantic — pinned to stable (2.13 betas break structured output)
+    "pydantic==2.12.5",
+    "pydantic-core==2.41.5",
+
+    # Memory — Advanced Challenge
+    "mem0ai==1.0.5",
+
+    # MCP — Advanced Challenge
+    "mcp[cli]==1.26.0",
+
+    # Deployment — Challenge 02
+    "fastapi==0.135.1",
+    "uvicorn==0.41.0",
+
+    # Azure
+    "azure-identity==1.26.0b2",
+    "azure-ai-projects==2.0.0b3",
+
+    # Utilities
+    "python-dotenv==1.2.2",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel",
+    "ipywidgets",
+    "black",
+    "tqdm",
+    "pytest",
+]
+
+
+[tool.uv]
+prerelease = "allow"
