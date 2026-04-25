@@ -1,4 +1,4 @@
-# Chapter 1: Create Your First Agent
+# Create Your First Agent
 
 In this chapter, you'll learn how to build your first AI agent using the Foundry Agent Service.  
 By the end, you'll have a simple agent running locally that you can interact with in real time.
